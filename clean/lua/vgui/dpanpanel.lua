@@ -38,12 +38,12 @@ function PANEL:Init()
 		self:SetCursor( "arrow" )
 	end
 
-	function self.pnlCanvas:OnMousePressed( keyCode )
+	function self.pnlCanvas:OnMousePressed()
 		self.Dragging = { gui.MouseX() - self.x, gui.MouseY() - self.y }
 		self:MouseCapture( true )
 	end
 
-	function self.pnlCanvas:OnMouseReleased( keyCode )
+	function self.pnlCanvas:OnMouseReleased()
 		self.Dragging = nil
 		self.Sizing = nil
 		self:MouseCapture( false )

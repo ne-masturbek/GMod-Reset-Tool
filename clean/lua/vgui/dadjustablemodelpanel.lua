@@ -2,14 +2,12 @@
 local PANEL = {}
 
 AccessorFunc( PANEL, "m_bFirstPerson", "FirstPerson" )
-AccessorFunc( PANEL, "m_iMoveScale", "MovementScale" )
 
 function PANEL:Init()
 
 	self.mx = 0
 	self.my = 0
 	self.aLookAngle = angle_zero
-	self:SetMovementScale( 1 )
 
 end
 
@@ -141,7 +139,7 @@ function PANEL:FirstPersonControls()
 	local speed = 0.5
 	if ( input.IsShiftDown() ) then speed = 4.0 end
 
-	self.vCamPos = self.vCamPos + Movement * speed * self:GetMovementScale()
+	self.vCamPos = self.vCamPos + Movement * speed
 
 end
 

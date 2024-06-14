@@ -304,7 +304,6 @@ AddNPC( {
 	Class = "npc_combine_s",
 	Category = Category,
 	Model = "models/combine_soldier.mdl",
-	Skin = 0,
 	Weapons = { "weapon_smg1", "weapon_ar2" },
 	KeyValues = { SquadName = "overwatch", Numgrenades = 5 }
 } )
@@ -324,7 +323,6 @@ AddNPC( {
 	Class = "npc_combine_s",
 	Category = Category,
 	Model = "models/combine_soldier_prisonguard.mdl",
-	Skin = 0,
 	Weapons = { "weapon_smg1", "weapon_ar2" },
 	KeyValues = { SquadName = "novaprospekt", Numgrenades = 5 }
 }, "CombinePrison" )
@@ -344,7 +342,6 @@ AddNPC( {
 	Class = "npc_combine_s",
 	Category = Category,
 	Model = "models/combine_super_soldier.mdl",
-	Skin = 0,
 	Weapons = { "weapon_ar2" },
 	KeyValues = { Numgrenades = 10, SquadName = "overwatch" },
 	SpawnFlags = SF_NPC_NO_PLAYER_PUSHAWAY

@@ -101,7 +101,7 @@ local function Find( ply, command, arguments )
 
 		Msg( "Finding '", arguments[1], "' ", ( SERVER and "SERVERSIDE" or "CLIENTSIDE" ), ":\n\n" )
 		FindInTable( _G, arguments[1] )
-		--FindInTable( debug.getregistry(), arguments[1] )
+		FindInTable( debug.getregistry(), arguments[1] )
 
 	end
 
@@ -127,13 +127,13 @@ if ( SERVER ) then
 	What am I looking at?
 -----------------------------------------------------------]]
 concommand.Add( "trace", function( ply )
-	if ( !IsValid( ply ) || ( !game.SinglePlayer() && !ply:IsListenServerHost() ) ) then return end
+	if ( !game.SinglePlayer() && !ply:IsListenServerHost() ) then return end
 
 	local tr = util.TraceLine( {
 		start = ply:EyePos(),
 		endpos = ply:EyePos() + ply:GetAimVector() * 30000,
 		filter = ply,
-		//mask = MASK_OPAQUE_AND_NPCS,
+		mask = MASK_OPAQUE_AND_NPCS,
 	} )
 
 	PrintTable( tr )

@@ -63,7 +63,7 @@ function PANEL:AddCVar( strText, convar, on, off, funcFunction )
 
 end
 
-function PANEL:AddSpacer()
+function PANEL:AddSpacer( strText, funcFunction )
 
 	local pnl = vgui.Create( "DPanel", self )
 	pnl.Paint = function( p, w, h )
@@ -80,7 +80,7 @@ end
 function PANEL:AddSubMenu( strText, funcFunction )
 
 	local pnl = vgui.Create( "DMenuOption", self )
-	local SubMenu = pnl:AddSubMenu()
+	local SubMenu = pnl:AddSubMenu( strText, funcFunction )
 
 	pnl:SetText( strText )
 	if ( funcFunction ) then pnl.DoClick = funcFunction end

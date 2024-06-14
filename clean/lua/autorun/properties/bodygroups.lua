@@ -81,7 +81,6 @@ properties.Add( "bodygroups", {
 					modelname = string.StripExtension( modelname )
 
 					local opt = groups:AddOption( modelname )
-					opt:SetRadio( true )
 					opt:SetChecked( target:GetBodygroup( v.id ) == i - 1 )
 					opt:SetIsCheckable( true )
 					opt.OnChecked = function( s, checked ) if ( checked ) then self:SetBodyGroup( ent, v.id, i - 1 ) end end

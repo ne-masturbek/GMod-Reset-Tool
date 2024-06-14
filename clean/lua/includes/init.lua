@@ -1,4 +1,33 @@
 
+-- Temporary hack
+local meta = {}
+function meta.__index( self, key )
+	return FindMetaTable( key )
+end
+
+local metas = {}
+function meta.__newindex( self, key, value )
+	rawset( self, key, value )
+
+	if ( isstring( key ) and istable( value ) ) then
+		metas[ key ] = value
+	end
+end
+
+local tbl = {}
+setmetatable( tbl, meta )
+debug.getregistry = function()
+	return tbl
+end
+
+local oldFindMetaTable = FindMetaTable
+FindMetaTable = function( name )
+	local f = oldFindMetaTable( name )
+	if ( f ) then return f end
+
+	return metas[ name ]
+end
+
 --[[---------------------------------------------------------
 	Non-Module includes
 -----------------------------------------------------------]]

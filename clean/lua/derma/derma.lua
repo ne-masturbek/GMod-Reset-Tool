@@ -5,7 +5,9 @@ local Msg			= Msg
 local setmetatable	= setmetatable
 local _G			= _G
 local gamemode		= gamemode
+local debug			= debug
 local pairs			= pairs
+local ispanel		= ispanel
 local isfunction	= isfunction
 
 module( "derma" )
@@ -32,10 +34,10 @@ local function FindPanelsByClass( SeekingClass )
 	-- We're only doing it this way because it doesn't matter if it's a
 	-- bit slow - because this function is only used when reloading.
 	--
-	local tbl = vgui.GetAll()
+	local tbl = debug.getregistry()
 	for k, v in pairs( tbl ) do
 
-		if ( v.ClassName && v.ClassName == SeekingClass ) then
+		if ( ispanel( v ) && v.ClassName && v.ClassName == SeekingClass ) then
 
 			table.insert( outtbl, v )
 
