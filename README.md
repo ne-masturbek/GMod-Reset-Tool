@@ -12,7 +12,7 @@
 
 * Discord: ne_masturbek
 * Steam: [Link](https://steamcommunity.com/id/gluadev)
-* Email: -
+* Email: - n3_masturbek@proton.me
 
 ---
 
@@ -30,7 +30,7 @@
 
 * Discord: ne_masturbek
 * Steam: [Link](https://steamcommunity.com/id/gluadev)
-* Email: -
+* Email: - n3_masturbek@proton.me
 
 ---
 
@@ -48,7 +48,7 @@
 
 * Discord: ne_masturbek
 * Steam: [Link](https://steamcommunity.com/id/gluadev)
-* Email: -
+* Email: - n3_masturbek@proton.me
 
 ---
 
@@ -66,4 +66,4 @@
 
 * Discord : ne_masturbek
 * Steam : [Link](https://steamcommunity.com/id/gluadev)
-* Email : -
+* Email : - n3_masturbek@proton.me
